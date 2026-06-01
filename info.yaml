@@ -1,29 +1,29 @@
 project:
-  title: "1-Bit CNN Accelerator"
-  author: "Satya Roop Bankuru"
-  description: "1-bit 3x3 serial CNN accelerator using XNOR convolution for Tiny Tapeout."
+  title: "1-Bit CNN Accelerator V2"
+  description: "Low-power CNN accelerator with programmable threshold and detection flag."
+  author: "Satya Roop"
   language: "Verilog"
   clock_hz: 50000000
   tiles: "1x1"
   analog_pins: 0
-  top_module: "tt_um_1bit_cnn"
+  top_module: tt_um_1bit_cnn
   source_files:
     - "project.v"
 
 yaml_version: 6
 
 pinout:
-  ui[0]: "Pixel input"
+  ui[0]: "Serial pixel input"
   ui[1]: "Data valid"
-  ui[2]: "unused"
-  ui[3]: "unused"
-  ui[4]: "unused"
+  ui[2]: "Threshold bit0"
+  ui[3]: "Threshold bit1"
+  ui[4]: "Threshold bit2"
   ui[5]: "unused"
   ui[6]: "unused"
   ui[7]: "unused"
 
-  uo[0]: "CNN output"
-  uo[1]: "unused"
+  uo[0]: "CNN result"
+  uo[1]: "Detection flag"
   uo[2]: "unused"
   uo[3]: "unused"
   uo[4]: "unused"
