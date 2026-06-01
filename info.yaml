@@ -10,6 +10,10 @@ project:
   source_files:
     - "project.v"
 
+
+
+
+
 yaml_version: 6
 
 pinout:
